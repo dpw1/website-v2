@@ -20,7 +20,7 @@ const Products = () => {
 
   const handlePremiumContact = () => {
     // Open email client or contact form
-    window.location.href = 'mailto:support@datingguide.com?subject=Premium Service Inquiry';
+        window.location.href = 'mailto:getDatesWithAI@proton.me?subject=Premium Service Inquiry';
   };
 
   return (

@@ -83,4 +83,4 @@ Uses Inter font family from Google Fonts. To change, update the font import in `
 
 ## Support
 
-For questions or support, contact: support@datingguide.com
+For questions or support, contact: getDatesWithAI@proton.me
