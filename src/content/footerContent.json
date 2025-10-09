@@ -1,0 +1,15 @@
+{
+  "title": "Ready to Transform Your Dating Life with {{productName}}?",
+  "subtitle": "Get started today and join thousands of men who've improved their dating success",
+  "contact": {
+    "email": "getDatesWithAI@gmail.com",
+    "responseTime": "We typically respond within 24 hours"
+  },
+  "links": {
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service",
+    "support": "Support"
+  },
+  "copyright": "© {{year}} {{companyName}}. All rights reserved.",
+  "disclaimer": "Results may vary. Individual success depends on implementation and effort. We provide educational content and support, but cannot guarantee specific outcomes."
+}

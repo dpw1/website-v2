@@ -1,0 +1,29 @@
+{
+  "short_name": "GetDatesWithAI",
+  "name": "GetDatesWithAI - AI Dating Guide | Get More Matches & Dates",
+  "description": "Transform your dating life with our comprehensive AI dating guide. Get 3x more matches and convert them to real dates.",
+  "icons": [
+    {
+      "src": "favicon.ico",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "logo192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "logo512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": "/",
+  "display": "standalone",
+  "theme_color": "#667eea",
+  "background_color": "#0a0a0a",
+  "orientation": "portrait-primary",
+  "categories": ["dating", "lifestyle", "productivity"],
+  "lang": "en-US"
+}

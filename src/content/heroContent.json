@@ -1,0 +1,40 @@
+{
+  "title": "Make AI photos of yourself. Get more dates.",
+  "subtitle": "<u>Learn</u> how to create hyper realistic AI pictures of yourself & meet more women in real life.",
+  "guarantee": "This will legitimately change your dating life in a matter of days. If you don't get a date within 10 days email me and I'll personally review what is going on. ",
+  "cta": {
+    "primary": "View Products & Get Started",
+    "secondary": "Learn More"
+  },
+  "stats": [
+    {
+      "number": "95%",
+      "label": "Success Rate"
+    },
+    {
+      "number": "100+",
+      "label": "Men Helped"
+    },
+    {
+      "number": "up to 4x",
+      "label": "More Matches"
+    }
+  ],
+  "sliderImages": [
+    {
+      "src": "/images/success/1.png",
+      "alt": "Success story 1 - Dating profile transformation result",
+      "label": "Travel"
+    },
+    {
+      "src": "/images/success/2.png",
+      "alt": "Success story 2 - Dating profile transformation result",
+      "label": "Yacht"
+    },
+    {
+      "src": "/images/success/3.png",
+      "alt": "Success story 3 - Dating profile transformation result",
+      "label": "Social"
+    }
+  ]
+}
