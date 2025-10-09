@@ -10,10 +10,6 @@ const Hero = () => {
     document.getElementById('products').scrollIntoView({ behavior: 'smooth' });
   };
 
-  const scrollToValueProp = () => {
-    document.getElementById('value-proposition').scrollIntoView({ behavior: 'smooth' });
-  };
-
   return (
         <main className="hero section">
           <div className="container">
