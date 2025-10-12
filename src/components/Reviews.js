@@ -23,25 +23,6 @@ const Reviews = () => {
     }
   ];
 
-  // Load PhotoSwipe after page is completely loaded
-  useEffect(() => {
-    const loadPhotoSwipe = async () => {
-      try {
-        const module = await import('photoswipe');
-        setPhotoSwipe(() => module.default);
-      } catch (error) {
-        console.error('Failed to load PhotoSwipe:', error);
-      }
-    };
-
-    // Wait for page to be completely loaded
-    if (document.readyState === 'complete') {
-      loadPhotoSwipe();
-    } else {
-      window.addEventListener('load', loadPhotoSwipe);
-      return () => window.removeEventListener('load', loadPhotoSwipe);
-    }
-  }, []);
 
   const openPhotoSwipe = async (index) => {
     try {
