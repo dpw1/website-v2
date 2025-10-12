@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import appConfig from '../config/appConfig.json';
 
 const Header = () => {
@@ -12,6 +12,20 @@ const Header = () => {
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
+
+  // Prevent body scroll when mobile menu is open
+  useEffect(() => {
+    if (isMobileMenuOpen) {
+      document.body.classList.add('mobile-menu-open');
+    } else {
+      document.body.classList.remove('mobile-menu-open');
+    }
+
+    // Cleanup on unmount
+    return () => {
+      document.body.classList.remove('mobile-menu-open');
+    };
+  }, [isMobileMenuOpen]);
 
   return (
     <header className="site-header">
@@ -34,17 +48,17 @@ const Header = () => {
 
           <nav className={`header-nav ${isMobileMenuOpen ? 'mobile-open' : ''}`}>
             <ul className="nav-menu">
-              <li><button onClick={() => scrollToSection('value-proposition')}>Why It Works</button></li>
-              <li><button onClick={() => scrollToSection('ethical-ai')}>Ethical AI</button></li>
               <li><button onClick={() => scrollToSection('reviews')}>Reviews</button></li>
+              <li><button onClick={() => scrollToSection('introduction')}>About</button></li>
               <li><button onClick={() => scrollToSection('products')}>Products</button></li>
               <li><button onClick={() => scrollToSection('faq')}>FAQ</button></li>
+              <li><button onClick={() => scrollToSection('contact')}>Contact</button></li>
             </ul>
             <button 
               className="btn btn-primary header-cta"
               onClick={() => scrollToSection('products')}
             >
-              Get Now
+              Get Started
             </button>
           </nav>
         </div>

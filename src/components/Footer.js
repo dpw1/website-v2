@@ -32,14 +32,9 @@ const Footer = () => {
       <div className="container">
         <div className="footer-content">
           <div className="footer-cta">
-            <h2>Ready to Transform Your Dating Life with AI Photos?</h2>
-            <HtmlContent content="Get started today and join thousands of men who've improved their dating success" tag="p" className="footer-subtitle" />
-            <button 
-              className="btn btn-primary"
-              onClick={scrollToProducts}
-            >
-              Get Started Now
-            </button>
+            <h2>Ready to Transform Your Dating Life?</h2>
+            <HtmlContent content="Stop post poning what truly matters. You're here for a reason. This will change your life." tag="p" className="footer-subtitle" />
+ 
           </div>
 
           <div className="footer-contact">
@@ -64,7 +59,7 @@ const Footer = () => {
         </div>
 
         <div className="footer-bottom">
-          <p className="copyright">© 2024 MatchWithAI. All rights reserved.</p>
+          <p className="copyright">© 2025 MatchWithAI. All rights reserved.</p>
           <p className="disclaimer">Results may vary. Individual success depends on implementation and effort. We provide educational content and support, but cannot guarantee specific outcomes.</p>
         </div>
       </div>

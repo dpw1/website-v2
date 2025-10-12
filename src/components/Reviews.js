@@ -85,8 +85,8 @@ const Reviews = () => {
     <section id="reviews" className="section">
       <div className="container">
         <header className="section-title">
-          <h2>Reviews</h2>
-          <p className="section-subtitle">I want to see you here next!</p>
+          <h2>What my clients are saying</h2>
+          <p className="section-subtitle">I want to see you here next! More reviews coming soon ;)</p>
         </header>
         
         <div className="grid grid-3">

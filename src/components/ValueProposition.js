@@ -28,7 +28,7 @@ const ValueProposition = () => {
           <div className="additional-content-paragraphs">
             <p className="paragraph-text">Competitors will charge you more than the price of this book just to make a limited number of pictures that may not even work.</p>
             <p className="paragraph-text">In this book, you will learn how to create as many images as you want, as well as understand what type of pictures work.</p>
-            <p className="paragraph-text">I will show you exactly how to make the images, as well as the cheapest services online to generate them and the correct prompts to achieve the best results.</p>
+            <p className="paragraph-text">I will show you exactly how to make the images, as well as how to find the cheapest services online to generate AI images and the correct prompts to achieve the best results.</p>
           </div>
         </div>
 

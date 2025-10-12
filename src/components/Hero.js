@@ -34,10 +34,10 @@ const Hero = () => {
         <main className="hero section">
           <div className="container">
             <div className="hero-content">
-              <HtmlContent content="Meet women online.<br> go on real life dates." tag="h1" />
+              <HtmlContent content="Attract women online.<br> Go on real life dates." tag="h1" />
               
               {/* Slider Subtitle */}
-              <HtmlContent content="Get your dating life fixed in a matter of days." tag="h3" className="slider-subtitle" />
+              <HtmlContent content="Learn how to turn selfies into realistic photos with AI and turn matches into dates." tag="h3" className="slider-subtitle" />
               
               {/* Image Slider */}
               <ImageSlider 
@@ -46,10 +46,10 @@ const Hero = () => {
                 interval={4000}
               />
               
-              <HtmlContent content="<u>Learn</u> how to create hyper realistic AI pictures of yourself & meet more women in real life." tag="h2" className="hero-subtitle" />
+              <HtmlContent content="The only PRACTICAL guide on how to master online dating and get in front of women IRL, not just collecting matches." tag="h2" className="hero-subtitle" />
           
           <div className="hero-guarantee">
-            <p><strong>This will legitimately change your dating life in a matter of days. If you don't get a date within 10 days email me and I'll personally review what is going on.</strong></p>
+            <p><strong>I firmly believe this will legitimately any man's dating life in a matter of days. <br/>If you don't get a date within 10 days email me and I'll personally review what is going on.</strong></p>
           </div>
 
           <div className="hero-cta">

@@ -1,48 +1,51 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
-const Modal = ({ isOpen, onClose, title, children }) => {
-  const handleBackdropClick = (e) => {
-    if (e.target === e.currentTarget) {
-      onClose();
-    }
-  };
+const Modal = ({ isOpen, onClose, children, className = '', title = '', showCloseButton = true }) => {
+  // Handle ESC key to close modal
+  useEffect(() => {
+    const handleKeyDown = (event) => {
+      if (event.key === 'Escape' && isOpen) {
+        onClose();
+      }
+    };
 
-  const handleKeyDown = React.useCallback((e) => {
-    if (e.key === 'Escape') {
-      onClose();
-    }
-  }, [onClose]);
-
-  React.useEffect(() => {
     if (isOpen) {
       document.addEventListener('keydown', handleKeyDown);
+      // Prevent body scroll when modal is open
       document.body.style.overflow = 'hidden';
-    } else {
-      document.body.style.overflow = 'unset';
     }
 
     return () => {
       document.removeEventListener('keydown', handleKeyDown);
       document.body.style.overflow = 'unset';
     };
-  }, [isOpen, handleKeyDown]);
+  }, [isOpen, onClose]);
 
   if (!isOpen) return null;
 
   return (
-    <div className="modal-backdrop" onClick={handleBackdropClick}>
-      <div className="modal-container">
-        <div className="modal-header">
-          <h2 className="modal-title">{title}</h2>
+    <div className="modal-overlay" onClick={onClose}>
+      <div 
+        className={`modal-content ${className}`}
+        onClick={(e) => e.stopPropagation()}
+      >
+        {showCloseButton && (
           <button 
-            className="modal-close"
-            onClick={onClose}
+            className="modal-close" 
+            onClick={onClose} 
             aria-label="Close modal"
           >
             ×
           </button>
-        </div>
-        <div className="modal-content">
+        )}
+        
+        {title && (
+          <div className="modal-header">
+            <h2 className="modal-title">{title}</h2>
+          </div>
+        )}
+        
+        <div className="modal-body">
           {children}
         </div>
       </div>

@@ -19,24 +19,24 @@ const FAQ = () => {
     },
     {
       question: "How do I create AI images?",
-      answer: "You'll need to do a small photoshoot at home with good lighting. The ebook includes detailed instructions on how to take the right photos and use AI tools to generate realistic, attractive images that represent your authentic self."
+      answer: "There are online services that will generate AI images for you. I will show you how to find the cheapest services online to generate AI images and the correct prompts to achieve the best results. You will also need to take new pictures of yourself at home, which I will show you in details how to do to achieve the best results."
     },
     {
       question: "Will the photos look realistic and not 'AI-ish'?",
-      answer: "Yes! My method specifically teaches you to create realistic, casual smartphone-style photos. I avoid the 'photoshoot-ish' look that screams 'AI generated.' The goal is photos that look like natural, everyday pictures you'd take yourself."
+      answer: "Yes. When you're generating AI images, some will come out great, others not so great. It's a matter of trial and error.<br><br>With my method I'll show you to get images as realistic as possible, with the casual smartphone-style photos."
     },
     {
       question: "Can dating apps detect AI photos?",
-      answer: "No, dating apps cannot detect AI-generated photos. The technology used by dating apps focuses on detecting fake accounts and spam, not AI-enhanced photos. My methods create photos that are indistinguishable from regular photos."
+      answer: "As of yet there is no proof that dating apps can detect AI-generated photos, especially the realistic ones that are taught here."
     },
     {
       question: "Do I need a powerful computer?",
-      answer: "No, you don't need a powerful computer. The AI services I recommend run through websites, so you just need internet access. However, I recommend using a computer rather than a phone for ease of use and better results."
+      answer: "No, you don't need a powerful computer. The AI services I recommend run through websites, so you just need internet access."
     },
-    {
-      question: "Will I get banned for using AI photos?",
-      answer: "Dating apps don't explicitly ban AI photos, but they do require authenticity. My approach focuses on enhancing your authentic self rather than creating false personas. For reference, here are the official guidelines: Hinge Community Guidelines (https://hinge.co/community-guidelines), Tinder Community Guidelines (https://policies.tinder.com/community-guidelines), and Bumble Community Guidelines (https://bumble.com/community-guidelines). I teach ethical practices that align with these policies."
-    },
+      {
+        question: "Will I get banned for using AI photos?",
+        answer: "Dating apps don't explicitly ban AI photos, they require authenticity (in other words: making sure you look the same as in your pictures).<br><br>My approach focuses on enhancing your authentic self rather than creating false personas. For reference, here are the official guidelines: <a href='https://hinge.co/ai-principles' target='_blank' rel='noopener noreferrer'>Hinge AI Principles</a>, <a href='https://policies.tinder.com/community-guidelines/intl/en/' target='_blank' rel='noopener noreferrer'>Tinder Community Guidelines</a>, and <a href='https://bumble.com/en-us/guidelines' target='_blank' rel='noopener noreferrer'>Bumble Community Guidelines</a>. I teach ethical practices that align with these policies."
+      },
     {
       question: "Can I go on X dates a week?",
       answer: "You will definitely go on more dates, but it's important to be realistic about the possibilities. This is something I go in depth in the book. There's a concept of 'natural attractiveness' (height, bone structure, good genetics, etc.) and 'controlled attractiveness' (style, grooming, haircut/beards that suit your face, being in shape, etc.). The first one is obviously beyond anyone's control (let's not consider plastic surgery for now). The other is where the right effort can put you above even men with natural attractiveness."
@@ -52,6 +52,18 @@ const FAQ = () => {
     {
       question: "Can women tell the pics are AI?",
       answer: "So far, I have not had any women calling me or my clients out about being AI. It's possible that some of them suspect though, and I teach you how to quickly prove your 'realness' and put her at ease in the guide once you start chatting. I also show you how to make the pictures look as non-AI as possible. Bear in mind this technology is quickly evolving, and I'll be updating the guide with every new major tech update. We are months away from a technology where it won't be possible to tell whether it's AI or not."
+    },
+    {
+      question: "Isn't this catfishing/unethical?",
+      answer: "No. The definition of catfishing is: \"a person who deceives someone online by means of a fictional or assumed persona, especially with the aim of luring them into a relationship.\" With AI pictures you are just portraying yourself under the best light. The pictures will still look like you. If you want to actually improve your looks, you can use apps like FaceApp after the images are generated."
+    },
+    {
+      question: "Can I use your guide without AI images?",
+      answer: "Absolutely! You can use the <a href='#products' onclick='document.getElementById(\"products\").scrollIntoView({behavior: \"smooth\"})'>Online Dating Mastery Ebook</a> with your real images and still have good results if you have decent pictures."
+    },
+    {
+      question: "Can I purchase the AI image guide individually?",
+      answer: "For the time being, no. The 'Online Dating Mastery Ebook' has fundamental concepts that must be used with the AI images."
     }
   ];
 
