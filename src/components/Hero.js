@@ -1,34 +1,55 @@
 import React from 'react';
-import heroContent from '../content/heroContent.json';
-import { processContentObject } from '../utils/contentProcessor';
 import HtmlContent from './HtmlContent';
 import ImageSlider from './ImageSlider';
 
 const Hero = () => {
-  const content = processContentObject(heroContent);
   const scrollToProducts = () => {
     document.getElementById('products').scrollIntoView({ behavior: 'smooth' });
   };
+
+  const sliderImages = [
+    {
+      src: "/images/success/1.png",
+      alt: "Success story 1 - Dating profile transformation result",
+      label: "Travel"
+    },
+    {
+      src: "/images/success/2.png",
+      alt: "Success story 2 - Dating profile transformation result",
+      label: "Casual"
+    },
+    {
+      src: "/images/success/3.png",
+      alt: "Success story 3 - Dating profile transformation result",
+      label: "Night Out"
+    },
+    {
+      src: "/images/success/4.png",
+      alt: "Success story 4 - Dating profile transformation result",
+      label: "Yacht"
+    }
+  ];
 
   return (
         <main className="hero section">
           <div className="container">
             <div className="hero-content">
-              <h1>{content.title}</h1>
+              <HtmlContent content="Meet women online.<br> go on real life dates." tag="h1" />
+              
+              {/* Slider Subtitle */}
+              <HtmlContent content="Get your dating life fixed in a matter of days." tag="h3" className="slider-subtitle" />
               
               {/* Image Slider */}
-              {content.sliderImages && content.sliderImages.length > 0 && (
-                <ImageSlider 
-                  images={content.sliderImages}
-                  autoPlay={false}
-                  interval={4000}
-                />
-              )}
+              <ImageSlider 
+                images={sliderImages}
+                autoPlay={false}
+                interval={4000}
+              />
               
-              <HtmlContent content={content.subtitle} tag="h2" className="hero-subtitle" />
+              <HtmlContent content="<u>Learn</u> how to create hyper realistic AI pictures of yourself & meet more women in real life." tag="h2" className="hero-subtitle" />
           
           <div className="hero-guarantee">
-            <p><strong>{content.guarantee}</strong></p>
+            <p><strong>This will legitimately change your dating life in a matter of days. If you don't get a date within 10 days email me and I'll personally review what is going on.</strong></p>
           </div>
 
           <div className="hero-cta">
@@ -36,7 +57,7 @@ const Hero = () => {
               className="btn btn-primary"
               onClick={scrollToProducts}
             >
-              {content.cta.primary}
+              View Products & Get Started
             </button>
           </div>
         </div>

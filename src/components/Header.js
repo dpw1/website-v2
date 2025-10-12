@@ -1,9 +1,16 @@
-import React from 'react';
+import React, { useState } from 'react';
 import appConfig from '../config/appConfig.json';
 
 const Header = () => {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
   const scrollToSection = (sectionId) => {
     document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' });
+    setIsMobileMenuOpen(false); // Close mobile menu after clicking
+  };
+
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen);
   };
 
   return (
@@ -13,7 +20,19 @@ const Header = () => {
           <div className="logo">
             <h1 style={{ fontSize: '20px' }}>{appConfig.productName}</h1>
           </div>
-          <nav className="header-nav">
+          
+          {/* Mobile burger menu button */}
+          <button 
+            className="mobile-menu-toggle"
+            onClick={toggleMobileMenu}
+            aria-label="Toggle mobile menu"
+          >
+            <span className={`burger-line ${isMobileMenuOpen ? 'open' : ''}`}></span>
+            <span className={`burger-line ${isMobileMenuOpen ? 'open' : ''}`}></span>
+            <span className={`burger-line ${isMobileMenuOpen ? 'open' : ''}`}></span>
+          </button>
+
+          <nav className={`header-nav ${isMobileMenuOpen ? 'mobile-open' : ''}`}>
             <ul className="nav-menu">
               <li><button onClick={() => scrollToSection('value-proposition')}>Why It Works</button></li>
               <li><button onClick={() => scrollToSection('ethical-ai')}>Ethical AI</button></li>

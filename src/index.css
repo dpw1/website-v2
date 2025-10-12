@@ -1,3 +1,37 @@
+@import 'photoswipe/dist/photoswipe.css';
+
+/* PhotoSwipe custom styles */
+.pswp__img {
+  height: auto !important;
+  max-height: 100vh !important;
+  max-width: 100vw !important;
+  object-fit: contain !important;
+  height: auto !important;
+  max-height: 100vh !important;
+  max-width: 100vw !important;
+  object-fit: contain !important;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  top: 50%;
+}
+
+.pswp__item {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.pswp__zoom-wrap {
+  display: flex !important;
+
+ transform: unset !important;
+ position: relative !important;
+
+}
+
+
+
 body {
   margin: 0;
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',

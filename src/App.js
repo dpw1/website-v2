@@ -14,9 +14,9 @@ function App() {
     <div className="App">
       <Header />
       <Hero />
-      <ValueProposition />
-      <EthicalAI />
       <Reviews />
+      <ValueProposition />
+      {/* <EthicalAI /> */}
       <Products />
       <FAQ />
       <Footer />

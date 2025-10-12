@@ -1,43 +1,103 @@
-import React from 'react';
-import reviewsContent from '../content/reviewsContent.json';
-import { processContentObject } from '../utils/contentProcessor';
-import HtmlContent from './HtmlContent';
+import React, { useEffect, useState } from 'react';
 
 const Reviews = () => {
-  const content = processContentObject(reviewsContent);
+  const [PhotoSwipe, setPhotoSwipe] = useState(null);
 
-  const renderStars = (rating) => {
-    return '★'.repeat(rating) + '☆'.repeat(5 - rating);
+  const reviewImages = [
+    {
+      src: "/images/reviews/review1.jpg",
+      alt: "Customer review screenshot 1",
+      width: 800,
+      height: 1000
+    },
+    {
+      src: "/images/reviews/review2.jpg", 
+      alt: "Customer review screenshot 2",
+      width: 800,
+      height: 1000
+    },
+    {
+      src: "/images/reviews/review3.jpg",
+      alt: "Customer review screenshot 3",
+      width: 800,
+      height: 1000
+    }
+  ];
+
+  // Load PhotoSwipe after page is completely loaded
+  useEffect(() => {
+    const loadPhotoSwipe = async () => {
+      try {
+        const module = await import('photoswipe');
+        setPhotoSwipe(() => module.default);
+      } catch (error) {
+        console.error('Failed to load PhotoSwipe:', error);
+      }
+    };
+
+    // Wait for page to be completely loaded
+    if (document.readyState === 'complete') {
+      loadPhotoSwipe();
+    } else {
+      window.addEventListener('load', loadPhotoSwipe);
+      return () => window.removeEventListener('load', loadPhotoSwipe);
+    }
+  }, []);
+
+  const openPhotoSwipe = async (index) => {
+    try {
+      // Import both the core PhotoSwipe and the lightbox
+      const [PhotoSwipeModule, PhotoSwipeLightboxModule] = await Promise.all([
+        import('photoswipe'),
+        import('photoswipe/lightbox')
+      ]);
+      
+      const PhotoSwipe = PhotoSwipeModule.default;
+      const PhotoSwipeLightbox = PhotoSwipeLightboxModule.default;
+      
+      const items = reviewImages.map(image => ({
+        src: image.src,
+        width: image.width,
+        height: 'auto',
+        alt: image.alt
+      }));
+
+      const lightbox = new PhotoSwipeLightbox({
+        pswpModule: PhotoSwipe,
+        dataSource: items,
+        index: index,
+        bgOpacity: 0.8,
+        showHideOpacity: true,
+        history: false,
+        focus: false,
+        showAnimationDuration: 0,
+        hideAnimationDuration: 0
+      });
+
+      lightbox.init();
+      lightbox.loadAndOpen(index);
+    } catch (error) {
+      console.error('Failed to load PhotoSwipe:', error);
+    }
   };
 
   return (
     <section id="reviews" className="section">
       <div className="container">
         <header className="section-title">
-          <h2>{content.title}</h2>
-          <HtmlContent content={content.subtitle} tag="p" className="section-subtitle" />
+          <h2>Reviews</h2>
+          <p className="section-subtitle">I want to see you here next!</p>
         </header>
-
-        <div className="reviews-grid">
-          {content.reviews.map((review, index) => (
-            <div key={index} className="review-card">
-              <div className="review-header">
-                <div className="reviewer-info">
-                  <h4>{review.name}</h4>
-                  <p className="reviewer-location">{review.location}</p>
-                </div>
-                <div className="review-rating">
-                  <span className="stars">{renderStars(review.rating)}</span>
-                </div>
-              </div>
-              
-              <blockquote className="review-text">
-                "{review.text}"
-              </blockquote>
-              
-              <div className="review-result">
-                <strong>Result: {review.result}</strong>
-              </div>
+        
+        <div className="grid grid-3">
+          {reviewImages.map((image, index) => (
+            <div key={index} className="review-image" onClick={() => openPhotoSwipe(index)}>
+              <img 
+                src={image.src} 
+                alt={image.alt}
+                loading="lazy"
+                style={{ cursor: 'pointer' }}
+              />
             </div>
           ))}
         </div>
