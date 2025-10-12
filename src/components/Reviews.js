@@ -1,27 +1,52 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
 const Reviews = () => {
-
-  const reviewImages = [
+  const [reviewImages, setReviewImages] = useState([
     {
       src: "/images/reviews/review1.jpg",
-      alt: "Customer review screenshot 1",
-      width: 800,
-      height: 1000
+      alt: "Customer review screenshot 1"
     },
     {
       src: "/images/reviews/review2.jpg", 
-      alt: "Customer review screenshot 2",
-      width: 800,
-      height: 1000
+      alt: "Customer review screenshot 2"
     },
     {
       src: "/images/reviews/review3.jpg",
-      alt: "Customer review screenshot 3",
-      width: 800,
-      height: 1000
+      alt: "Customer review screenshot 3"
     }
-  ];
+  ]);
+
+  // Load image dimensions dynamically
+  useEffect(() => {
+    const loadImageDimensions = async () => {
+      const imagesWithDimensions = await Promise.all(
+        reviewImages.map(async (image) => {
+          return new Promise((resolve) => {
+            const img = new Image();
+            img.onload = () => {
+              resolve({
+                ...image,
+                width: img.naturalWidth,
+                height: img.naturalHeight
+              });
+            };
+            img.onerror = () => {
+              // Fallback dimensions if image fails to load
+              resolve({
+                ...image,
+                width: 800,
+                height: 1000
+              });
+            };
+            img.src = image.src;
+          });
+        })
+      );
+      setReviewImages(imagesWithDimensions);
+    };
+
+    loadImageDimensions();
+  }, []);
 
 
   const openPhotoSwipe = async (index) => {
@@ -37,8 +62,8 @@ const Reviews = () => {
       
       const items = reviewImages.map(image => ({
         src: image.src,
-        width: image.width,
-        height: 'auto',
+        width: image.width,  // actual pixel width
+        height: image.height, // actual pixel height
         alt: image.alt
       }));
 

@@ -1704,44 +1704,4 @@ p {
   }
 }
 
-/* PhotoSwipe Zoom Styles */
-.pswp__img {
-  height: auto !important;
-}
-
-.pswp__zoom-wrap {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-}
-
-.pswp__img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: auto !important;
-  height: auto !important;
-  max-width: none !important;
-  max-height: none !important;
-}
-
-/* Enable smooth zoom transitions */
-.pswp__zoom-wrap {
-  transition: transform 0.3s ease-out;
-}
-
-/* Touch-friendly zoom controls */
-.pswp__button--zoom {
-  display: block !important;
-}
-
-/* Ensure proper touch handling */
-.pswp__container {
-  touch-action: none;
-}
-
-.pswp__img {
-  touch-action: none;
-}
+/* PhotoSwipe styles moved to index.css for better organization */
