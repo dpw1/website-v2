@@ -8,17 +8,13 @@ const Products = () => {
 
   const handleProductClick = (product) => {
     if (product.link) {
-      if (product.link.startsWith('mailto:')) {
-        window.location.href = product.link;
-      } else {
-        // For ATC buttons, scroll to contact form instead of opening link
-        const contactSection = document.getElementById('contact');
-        if (contactSection) {
-          contactSection.scrollIntoView({ 
-            behavior: 'smooth',
-            block: 'start'
-          });
-        }
+      // For all buttons (both ATC and Book Now), scroll to contact form
+      const contactSection = document.getElementById('contact');
+      if (contactSection) {
+        contactSection.scrollIntoView({ 
+          behavior: 'smooth',
+          block: 'start'
+        });
       }
     }
   };
@@ -57,6 +53,7 @@ const Products = () => {
       price: "$79.99",
       description: "If you don't have good pictures yet, this is the best bet. Everything included in 'Online Dating Mastery Ebook' plus how to make realistic AI images of yourself.",
       features: [
+        "Everything from 'Online Dating Mastery Ebook'",
         "Realistic AI photos",
         "Proven photo prompts",
         "No photo skills needed",

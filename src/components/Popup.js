@@ -3,7 +3,7 @@ import Modal from './Modal';
 
 const Popup = () => {
   // Configuration variables
-  const SHOW_DELAY_SECONDS = 30; // How long to wait before showing popup (in seconds)
+  const SHOW_DELAY_SECONDS = 60; // How long to wait before showing popup (in seconds)
   const COOKIE_DURATION_DAYS = 3; // How long to remember popup was closed (in days)
   const COOKIE_NAME = 'popup_closed';
 
@@ -97,7 +97,7 @@ const Popup = () => {
       className="popup-form"
       title="Not sure yet? Let's talk."
     >
-      <p>Let's hop on a quick 10 mmins call and I can help you decide the best course of action.</p>
+      <p>Let's hop on a quick 10 mins call and I can help you decide the best course of action.</p>
       
       <form onSubmit={handleSubmit} className="popup-contact-form">
         <div className="form-group">
