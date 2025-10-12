@@ -130,16 +130,12 @@ const Products = () => {
 
               {(product.id === "combo" || product.id === "ebook") && (
                 <div className="more-details-link">
-                  <a 
-                    href="#" 
+                  <button 
                     className="more-details"
-                    onClick={(e) => {
-                      e.preventDefault();
-                      handleMoreDetailsClick(product.id);
-                    }}
+                    onClick={() => handleMoreDetailsClick(product.id)}
                   >
                     More details
-                  </a>
+                  </button>
                 </div>
               )}
 

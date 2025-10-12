@@ -2,8 +2,6 @@ import React from 'react';
 import './App.css';
 import Header from './components/Header';
 import Hero from './components/Hero';
-import ValueProposition from './components/ValueProposition';
-import EthicalAI from './components/EthicalAI';
 import Reviews from './components/Reviews';
 import Introduction from './components/Introduction';
 import Products from './components/Products';

@@ -1,5 +1,4 @@
 import React from 'react';
-import HtmlContent from './HtmlContent';
 
 const EbookContent = () => {
   return (

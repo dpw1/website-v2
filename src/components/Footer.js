@@ -7,9 +7,6 @@ const Footer = () => {
   const [isPrivacyModalOpen, setIsPrivacyModalOpen] = useState(false);
   const [isTermsModalOpen, setIsTermsModalOpen] = useState(false);
 
-  const scrollToProducts = () => {
-    document.getElementById('products').scrollIntoView({ behavior: 'smooth' });
-  };
 
   const openPrivacyModal = () => {
     setIsPrivacyModalOpen(true);

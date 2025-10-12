@@ -1,5 +1,4 @@
 import React from 'react';
-import HtmlContent from './HtmlContent';
 import Modal from './Modal';
 import EbookContent from './EbookContent';
 import ComboContent from './ComboContent';

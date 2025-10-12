@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 
 const Reviews = () => {
-  const [PhotoSwipe, setPhotoSwipe] = useState(null);
 
   const reviewImages = [
     {
