@@ -11,7 +11,14 @@ const Products = () => {
       if (product.link.startsWith('mailto:')) {
         window.location.href = product.link;
       } else {
-        window.open(product.link, '_blank');
+        // For ATC buttons, scroll to contact form instead of opening link
+        const contactSection = document.getElementById('contact');
+        if (contactSection) {
+          contactSection.scrollIntoView({ 
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
       }
     }
   };
@@ -65,8 +72,8 @@ const Products = () => {
     {
       id: "review",
       name: "Profile Review",
-      price: "$69.99",
-      description: "Get kind-hearted feedback on your dating profile with suggestions for improvement. NO 'brutal honesty' BS. I will be sincere and kind and give you the best suggestion to improve your current results",
+      price: "$99.99",
+      description: "Get kind-hearted feedback on your dating profile & pictures with suggestions for improvement. NO 'brutal honesty' BS. I will be sincere and kind and give you the best suggestion to improve your current results",
       features: [
    
         "Thorough profile analysis",

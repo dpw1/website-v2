@@ -51,7 +51,16 @@ const Reviews = () => {
         history: false,
         focus: false,
         showAnimationDuration: 0,
-        hideAnimationDuration: 0
+        hideAnimationDuration: 0,
+        // Enable zoom functionality with pinch-to-zoom
+        zoom: {
+          enabled: true,
+          maxZoomLevel: 4,
+          minZoomLevel: 1,
+          allowPanToNext: true
+        },
+        // Enable touch gestures for mobile
+        allowPanToNext: true
       });
 
       lightbox.init();
@@ -65,7 +74,7 @@ const Reviews = () => {
     <section id="reviews" className="section">
       <div className="container">
         <header className="section-title">
-          <h2>What my clients are saying</h2>
+          <h2>What customers are saying</h2>
           <p className="section-subtitle">I want to see you here next! More reviews coming soon ;)</p>
         </header>
         

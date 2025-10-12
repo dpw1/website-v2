@@ -6,7 +6,7 @@ const Introduction = () => {
       <div className="container">
         <header className="section-title">
           <h2>Why this will work for the average man</h2>
-          <p className="section-subtitle"></p>
+          <p className="section-subtitle">You don't need to be a model to have an amazing girlfriend or multiple women in your life.</p>
         </header>
         
         <div className="introduction-content">
@@ -14,9 +14,19 @@ const Introduction = () => {
         <div className="value-proposition-paragraphs">
           <h3 className="section-content-title">My Story</h3>
           <p className="paragraph-text">This is my 12 years of experience with women, condensed into a practical guide to help any average man get more dates.</p>
-          <p className="paragraph-text">I started this journey 12 years ago. Even during my childhood, I had a natural obsession with women: at 7 years old, I would buy gifts for the girls in my class.</p>
-          <p className="paragraph-text">I have always been a skinny man (ranging between 125lb - 145lb) of average height (5'9), with acne for years. I'm not bad-looking, but I am not a model either: just an average man. Needless to say women were not interested at all in me.</p>
-          <p className="paragraph-text">Still, I tried everything and eventually managed to live a life many would consider impossible unless you're 6+ feet, have a six-pack, are handsome and rich. Fortunately, this is a lie that I will happily debunk. It's not like having these things won't help: of course, being attractive and whatever makes things way easier. But being average and putting the right effort can get you even farther ahead of men naturally attractive.</p>
+          
+          <p className="paragraph-text">I have always been a skinny man (ranging between 125lb - 145lb) of average height (5'9), with acne for years. I'm not bad-looking, 
+            but I am not a model either: just an average man. 
+            Needless to say women were not interested at all in me. 
+            Despite these difficulties, I was still able to have multiple women in my life.</p>
+          <p className="paragraph-text">My life's been what many would consider impossible unless you're 6+ feet, 
+            have a six-pack, are handsome and rich. 
+            
+            Fortunately, this is a lie that I will happily debunk. 
+            
+            It's not like having these things won't help: 
+            of course, being attractive and whatever makes things way easier. 
+            But being average looking, when putting the right effort, can get you even farther ahead of men naturally attractive.</p>
           <p className="paragraph-text">For all these years, I kept it a secret, and now I want to help others with what I learned the hard way. Years of loneliness, solitude, and sexual frustration-something I see many men in this day and age going through.</p>
         </div>
 
