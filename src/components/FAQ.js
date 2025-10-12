@@ -55,19 +55,15 @@ With the AI images guide, you'll be able to generate pictures that will help you
     },
     {
       question: `Can women tell the pics are AI?`,
-      answer: `So far, I have not had any women calling me or my clients out about being AI. It's possible that some of them suspect though, and I teach you how to quickly prove your 'realness' and put her at ease in the guide once you start chatting. I also show you how to make the pictures look as non-AI as possible. Bear in mind this technology is quickly evolving, and I'll be updating the guide with every new major tech update. We are months away from a technology where it won't be possible to tell whether it's AI or not.`
+      answer: `So far, I have not had any women calling me or my clients out about being AI. It's possible that some of them suspect though, and I teach in the book how to quickly prove your 'realness' and put her at ease once you start chatting.`
     },
     {
       question: `Isn't this catfishing/unethical?`,
       answer: `No. The definition of catfishing is: "a person who deceives someone online by means of a fictional or assumed persona, especially with the aim of luring them into a relationship." With AI pictures you are just portraying yourself under the best light. The pictures will still look like you. If you want to actually improve your looks, you can use apps like FaceApp after the images are generated.`
     },
     {
-      question: `Can I use your guide without AI images?`,
+      question: `Can I use "Online Dating Mastery Ebook" without AI images?`,
       answer: `Absolutely! You can use the <a href='#products' onclick='document.getElementById("products").scrollIntoView({behavior: "smooth"})'>Online Dating Mastery Ebook</a> with your real images and still have good results if you have decent pictures.`
-    },
-    {
-      question: `Can I purchase the AI image guide individually?`,
-      answer: `For the time being, no. The 'Online Dating Mastery Ebook' has fundamental concepts that must be used with the AI images.`
     }
   ];
 
