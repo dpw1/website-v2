@@ -464,13 +464,42 @@ p {
 .slider-container {
   position: relative;
   width: 100%;
-  aspect-ratio: 1280 / 768;
+  
   max-width: 800px;
   margin: 0 auto;
   overflow: hidden;
   border-radius: 12px;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
   margin-bottom: 1rem;
+}
+
+/* AI Generated Label */
+.ai-generated-label {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 6px 12px;
+  border-radius: 20px;
+  z-index: 10;
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  animation: subtleGlow 2s ease-in-out infinite alternate;
+}
+
+@keyframes subtleGlow {
+  0% {
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+  }
+  100% {
+    box-shadow: 0 4px 20px rgba(102, 126, 234, 0.5);
+  }
 }
 
 /* Embla Carousel Styles */
@@ -485,12 +514,34 @@ p {
 }
 
 .embla__slide {
-  flex: 0 0 100%;
+  flex: 0 0 50%; /* Show two images side by side on desktop */
   min-width: 0;
   height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 0 4px; /* Small gap between images */
+}
+
+/* Mobile: Show 1 image per slide */
+@media (max-width: 768px) {
+  .embla__slide {
+    flex: 0 0 100%; /* Show one image per slide on mobile */
+    padding: 0 8px; /* Slightly larger gap on mobile */
+  }
+  
+  /* Fix thumbnail gallery overflow on mobile/tablet */
+  .thumbnail-gallery {
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 100%;
+    overflow-x: auto;
+    padding: 10px 5px;
+  }
+  
+  .thumbnail-item {
+    flex-shrink: 0;
+  }
 }
 
 .slide-image {
@@ -498,6 +549,13 @@ p {
   height: 100%;
   object-fit: cover;
   border-radius: 12px;
+  
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.slide-image:hover {
+  transform: scale(1.02);
+  opacity: 0.9;
 }
 
 .slider-arrow {
@@ -535,13 +593,19 @@ p {
 }
 
 /* Thumbnail Gallery */
+.thumbnail-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
 .thumbnail-gallery {
   display: flex;
   gap: 8px;
   justify-content: center;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   max-width: 100%;
-  overflow-x: auto;
   padding: 10px 0;
 }
 
@@ -579,6 +643,14 @@ p {
   transform: scale(1.1);
 }
 
+.thumbnail-image {
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.thumbnail-image:hover {
+  opacity: 0.8;
+}
+
 /* Thumbnail labels */
 .thumbnail-label {
   position: absolute;
@@ -593,6 +665,49 @@ p {
   text-align: center;
   text-transform: uppercase;
   letter-spacing: 0.5px;
+}
+
+/* Thumbnail Pagination */
+.thumbnail-pagination {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-top: 5px;
+}
+
+.thumbnail-nav-btn {
+  background: #667eea;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.thumbnail-nav-btn:hover:not(:disabled) {
+  background: #5a6fd8;
+  transform: scale(1.1);
+}
+
+.thumbnail-nav-btn:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.thumbnail-page-info {
+  font-size: 12px;
+  color: #666;
+  font-weight: 500;
+  min-width: 40px;
+  text-align: center;
 }
 
 .hero-content {
@@ -1159,7 +1274,7 @@ p {
   }
   
   .slider-container {
-    aspect-ratio: 1280 / 768;
+    
     max-width: 100%;
   }
   
@@ -1190,15 +1305,42 @@ p {
     right: 10px;
   }
   
+  .thumbnail-gallery {
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 100%;
+    overflow-x: auto;
+    padding: 10px 5px;
+  }
+  
   .thumbnail-item {
     width: 80px;
     height: 60px;
+    flex-shrink: 0;
   }
   
-      .thumbnail-label {
-        font-size: 8px;
-        padding: 6px 2px 2px;
-      }
+  .thumbnail-label {
+    font-size: 8px;
+    padding: 6px 2px 2px;
+  }
+  
+  .thumbnail-nav-btn {
+    width: 28px;
+    height: 28px;
+    font-size: 14px;
+  }
+  
+  .thumbnail-page-info {
+    font-size: 10px;
+  }
+  
+  .ai-generated-label {
+    top: 8px;
+    right: 8px;
+    font-size: 10px;
+    padding: 4px 8px;
+    border-radius: 15px;
+  }
       
       /* Modal responsive styles */
       .modal-backdrop {

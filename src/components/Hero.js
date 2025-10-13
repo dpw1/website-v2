@@ -9,25 +9,80 @@ const Hero = () => {
 
   const sliderImages = [
     {
-      src: "/images/success/1.png",
-      alt: "Success story 1 - Dating profile transformation result",
-      label: "Travel"
+      src: "/images/examples/a1-example-2.jpg",
+      alt: "AI enhanced dating profile example 1",
+      label: "Professional"
     },
     {
-      src: "/images/success/2.png",
-      alt: "Success story 2 - Dating profile transformation result",
+      src: "/images/examples/a1-example-3.jpg",
+      alt: "AI enhanced dating profile example 2",
       label: "Casual"
     },
     {
-      src: "/images/success/3.png",
-      alt: "Success story 3 - Dating profile transformation result",
-      label: "Night Out"
+      src: "/images/examples/a1-example-4.jpg",
+      alt: "AI enhanced dating profile example 3",
+      label: "Outdoor"
     },
     {
-      src: "/images/success/4.png",
-      alt: "Success story 4 - Dating profile transformation result",
-      label: "Yacht"
-    }
+      src: "/images/examples/a2-example-1.jpg",
+      alt: "AI enhanced dating profile example 4",
+      label: "Lifestyle"
+    },
+    {
+      src: "/images/examples/a2-example-2.jpg",
+      alt: "AI enhanced dating profile example 5",
+      label: "Social"
+    },
+    {
+      src: "/images/examples/a2-example-3.jpg",
+      alt: "AI enhanced dating profile example 6",
+      label: "Adventure"
+    },
+    {
+      src: "/images/examples/a3-2.jpg",
+      alt: "AI enhanced dating profile example 7",
+      label: "Stylish"
+    },
+    {
+      src: "/images/examples/a3-4.jpg",
+      alt: "AI enhanced dating profile example 8",
+      label: "Confident"
+    },
+    {
+      src: "/images/examples/a3-6.jpg",
+      alt: "AI enhanced dating profile example 9",
+      label: "Trendy"
+    },
+    {
+      src: "/images/examples/a3-7.jpg",
+      alt: "AI enhanced dating profile example 10",
+      label: "Sophisticated"
+    },
+    {
+      src: "/images/examples/a3-8.jpg",
+      alt: "AI enhanced dating profile example 11",
+      label: "Charming"
+    },
+    {
+      src: "/images/examples/a3-9.jpg",
+      alt: "AI enhanced dating profile example 12",
+      label: "Attractive"
+    },
+    {
+      src: "/images/examples/a3.jpg",
+      alt: "AI enhanced dating profile example 13",
+      label: "Engaging"
+    },
+    {
+      src: "/images/examples/a4-1.jpg",
+      alt: "AI enhanced dating profile example 14",
+      label: "Dynamic"
+    },
+    {
+      src: "/images/examples/a4-2.jpg",
+      alt: "AI enhanced dating profile example 15",
+      label: "Compelling"
+    },
   ];
 
   return (
@@ -37,7 +92,7 @@ const Hero = () => {
               <HtmlContent content="Attract women online.<br> Go on real life dates." tag="h1" />
               
               {/* Slider Subtitle */}
-              <HtmlContent content="Learn how to turn selfies into realistic photos with AI and turn matches into dates." tag="h3" className="slider-subtitle" />
+              <HtmlContent content="Turn your selfies into realistic AI photos & meet more women." tag="h3" className="slider-subtitle" />
               
               {/* Image Slider */}
               <ImageSlider 

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 
 const Reviews = () => {
   const [reviewImages, setReviewImages] = useState([
@@ -15,9 +15,12 @@ const Reviews = () => {
       alt: "Customer review screenshot 3"
     }
   ]);
+  const dimensionsLoaded = useRef(false);
 
   // Load image dimensions dynamically
   useEffect(() => {
+    if (dimensionsLoaded.current) return;
+    
     const loadImageDimensions = async () => {
       const imagesWithDimensions = await Promise.all(
         reviewImages.map(async (image) => {
@@ -43,10 +46,11 @@ const Reviews = () => {
         })
       );
       setReviewImages(imagesWithDimensions);
+      dimensionsLoaded.current = true;
     };
 
     loadImageDimensions();
-  }, []);
+  }, [reviewImages]);
 
 
   const openPhotoSwipe = async (index) => {
