@@ -8,13 +8,18 @@ const Products = () => {
 
   const handleProductClick = (product) => {
     if (product.link) {
-      // For all buttons (both ATC and Book Now), scroll to contact form
-      const contactSection = document.getElementById('contact');
-      if (contactSection) {
-        contactSection.scrollIntoView({ 
-          behavior: 'smooth',
-          block: 'start'
-        });
+      if (product.ecwid) {
+        // For Ecwid products, open the purchase link
+        window.open(product.link, '_blank');
+      } else {
+        // For non-Ecwid products (like Profile Review), scroll to contact form
+        const contactSection = document.getElementById('contact');
+        if (contactSection) {
+          contactSection.scrollIntoView({ 
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
       }
     }
   };
