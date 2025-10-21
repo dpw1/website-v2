@@ -54,12 +54,14 @@ const Header = () => {
               <li><button onClick={() => scrollToSection('faq')}>FAQ</button></li>
               <li><button onClick={() => scrollToSection('contact')}>Contact</button></li>
             </ul>
-            <button 
+            <a 
               className="btn btn-primary header-cta"
-              onClick={() => scrollToSection('products')}
+              href="https://getdateswithai.gumroad.com/l/wrutga"
+              target="_blank"
+              rel="noopener noreferrer"
             >
-              Get Started
-            </button>
+              Free Ebook
+            </a>
           </nav>
         </div>
       </div>

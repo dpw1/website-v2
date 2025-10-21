@@ -9,6 +9,7 @@ import FAQ from './components/FAQ';
 import ContactForm from './components/ContactForm';
 import Footer from './components/Footer';
 import Popup from './components/Popup';
+import PromoSlide from './components/PromoSlide';
 
 function App() {
   return (
@@ -23,7 +24,8 @@ function App() {
       <FAQ />
       <ContactForm />
       <Footer />
-      <Popup />
+      {/* <Popup /> */}
+      <PromoSlide />
     </div>
   );
 }
