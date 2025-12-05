@@ -56,7 +56,7 @@ const Footer = () => {
         </div>
 
         <div className="footer-bottom">
-          <p className="copyright">© 2025 MatchWithAI. All rights reserved.</p>
+          <p className="copyright">© 2025 GetDatesWithAI. All rights reserved.</p>
           <p className="disclaimer">Results may vary. Individual success depends on implementation and effort. We provide educational content and support, but cannot guarantee specific outcomes.</p>
         </div>
       </div>

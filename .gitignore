@@ -52,6 +52,10 @@ jspm_packages/
 # Optional npm cache directory
 .npm
 
+website-to-copy
+/website-to-copy/*
+/website-to-copy/
+
 # Optional REPL history
 .node_repl_history
 

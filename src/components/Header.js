@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import appConfig from '../config/appConfig.json';
+import { FREE_SAMPLE_FORM_URL } from '../utils/constants';
 
 const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -56,11 +57,9 @@ const Header = () => {
             </ul>
             <a 
               className="btn btn-primary header-cta"
-              href="https://getdateswithai.gumroad.com/l/wrutga"
-              target="_blank"
-              rel="noopener noreferrer"
+              href={FREE_SAMPLE_FORM_URL}
             >
-              Free Ebook
+              FREE dating photo
             </a>
           </nav>
         </div>

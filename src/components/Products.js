@@ -47,7 +47,7 @@ const Products = () => {
         "How to correctly ask her on a date",
         "Lifetime access and updates"
       ],
-      cta: "Buy Now",
+      cta: "Yes I want a free AI dating photo",
       ecwid: true,
       popular: false,
       link: "https://ezfyshop.company.site/products/Online-Dating-Mastery-p788600953"
@@ -66,7 +66,7 @@ const Products = () => {
         "Save money & time",
         "Boost dating matches"
       ],
-      cta: "Buy Now",
+      cta: "Yes I want a free AI dating photo",
       ecwid: true,
       popular: true,
       link: "https://ezfyshop.company.site/products/AI-Image-Generation-Online-Dating-Mastery-p788885232"

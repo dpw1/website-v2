@@ -1,12 +1,9 @@
 import React from 'react';
 import HtmlContent from './HtmlContent';
 import ImageSlider from './ImageSlider';
+import { FREE_SAMPLE_FORM_URL } from '../utils/constants';
 
 const Hero = () => {
-  const scrollToProducts = () => {
-    document.getElementById('products').scrollIntoView({ behavior: 'smooth' });
-  };
-
   const sliderImages = [
     {
       src: "/images/examples/a1-example-2.jpg",
@@ -89,10 +86,10 @@ const Hero = () => {
         <main className="hero section">
           <div className="container">
             <div className="hero-content">
-              <HtmlContent content="Attract women online.<br> Go on real life dates." tag="h1" />
+              <HtmlContent content="Get scroll-stopping dating photos without leaving home" tag="h1" />
               
               {/* Slider Subtitle */}
-              <HtmlContent content="Learn to turn your selfies into realistic AI photos." tag="h3" className="slider-subtitle" />
+              <HtmlContent content="Turn your selfies into realistic AI photos." tag="h3" className="slider-subtitle" />
               
               {/* Image Slider */}
               <ImageSlider 
@@ -108,12 +105,12 @@ const Hero = () => {
           </div>
 
           <div className="hero-cta">
-            <button 
+            <a 
               className="btn btn-primary"
-              onClick={scrollToProducts}
+              href={FREE_SAMPLE_FORM_URL}
             >
-              View Products & Get Started
-            </button>
+              Yes I want a free AI dating photo
+            </a>
           </div>
         </div>
       </div>
