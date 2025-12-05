@@ -91,7 +91,7 @@ const CopiedContent = () => {
           <div className="image-carousel" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '14px', margin: '2rem 0' }}>
             {carouselImages.map((img, idx) => (
               <figure key={idx} className="carousel-image">
-                <img src={img} alt={`AI dating photo example ${idx + 1}`} style={{ width: '100%', height: 'auto', borderRadius: '8px' }} />
+                <img src={img} alt={`AI dating example ${idx + 1}`} style={{ width: '100%', height: 'auto', borderRadius: '8px' }} />
               </figure>
             ))}
           </div>
