@@ -36,7 +36,7 @@ const Hero = () => {
                 interval={3000}
               />
               
-              <HtmlContent content="the only PRAGMATIC approach to actually start getting more matchesss and meeting more women in real life." tag="h2" className="hero-subtitle" />
+              <HtmlContent content="the only PRAGMATIC approach to actually start getting more matches and meeting more women in real life." tag="h2" className="hero-subtitle" />
           
           {/* <div className="hero-guarantee">
             <p><strong>I firmly believe this will legitimately improve any man's dating life in a matter of days. <br/>If you don't get more matches within 10 days email me and I'll personally review what is going on.</strong></p>
