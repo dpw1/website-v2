@@ -43,7 +43,7 @@ const Hero = () => {
                 interval={4000}
               />
               
-              <HtmlContent content="The only PRACTICAL guide on how to master online dating and get in front of women in real life, not just making pictures & collecting matches." tag="h2" className="hero-subtitle" />
+              <HtmlContent content="the only PRAGMATIC approach to actually start getting dates and meeting more women in real life." tag="h2" className="hero-subtitle" />
           
           <div className="hero-guarantee">
             <p><strong>I firmly believe this will legitimately any man's dating life in a matter of days. <br/>If you don't get a date within 10 days email me and I'll personally review what is going on.</strong></p>
