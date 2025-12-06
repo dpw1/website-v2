@@ -13,7 +13,7 @@ const StickyButton = () => {
         className="sticky-button btn btn-primary"
         href={FREE_SAMPLE_FORM_URL}
       >
-        Yes I want a free AI dating photo
+        Get my free AI photo
       </a>
     </div>
   );

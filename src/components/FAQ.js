@@ -26,8 +26,6 @@ const FAQ = () => {
         question: `Will I get banned for using AI photos?`,
         answer: `No. Dating apps don't explicitly ban AI photos, they require authenticity (in other words: making sure you look the same as in your pictures).<br><br>My approach focuses on enhancing your authentic self rather than creating false personas. For reference, here are the official guidelines: <a href='https://hinge.co/ai-principles' target='_blank' rel='noopener noreferrer'>Hinge AI Principles</a>, <a href='https://policies.tinder.com/community-guidelines/intl/en/' target='_blank' rel='noopener noreferrer'>Tinder Community Guidelines</a>, and <a href='https://bumble.com/en-us/guidelines' target='_blank' rel='noopener noreferrer'>Bumble Community Guidelines</a>. I teach ethical practices that align with these policies.` 
       },
-  
-
     {
       question: `Aren't AI images catfishing/unethical?`,
       answer: `The ethics behind AI images depend on how you use them. If you create images of yourself in a Lamborghini or a mansion when you've never been in those situations, that's not right. However, if you use AI to generate images of yourself in places you've actually been or in neutral settings, there's nothing unethical about it.<br><br>In fact, I believe the amount of filters people use to dramatically alter their appearance is far more unethical than using AI images. With our method, you'll look like your actual self—just presented in the best possible light.<br><br>That being said, you can always use AI as a temporary solution: use AI pictures to get matches, meet nice women, go on real adventures with them, and then take new authentic pictures together.`
@@ -56,7 +54,7 @@ const FAQ = () => {
   };
 
   return (
-    <section className="section">
+    <section id="faq" className="section">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqStructuredData) }} />
       <div className="container">
         <header className="section-title">

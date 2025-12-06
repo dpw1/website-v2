@@ -11,7 +11,7 @@ const ImageSlider = ({ images, autoPlay = true, interval = 3000 }) => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [imagesWithDimensions, setImagesWithDimensions] = useState(images);
   
-  const thumbnailsPerPage = 5;
+  const thumbnailsPerPage = 6;
   const totalThumbnailPages = Math.ceil(imagesWithDimensions.length / thumbnailsPerPage);
 
   // Load image dimensions dynamically

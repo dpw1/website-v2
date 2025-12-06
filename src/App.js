@@ -2,8 +2,10 @@ import React from 'react';
 import './App.css';
 import Header from './components/Header';
 import Hero from './components/Hero';
+import AIDatingPhotos from './components/AIDatingPhotos';
 import Reviews from './components/Reviews';
 import Introduction from './components/Introduction';
+import EthicalSection from './components/EthicalSection';
 import FAQ from './components/FAQ';
 import ContactForm from './components/ContactForm';
 import Footer from './components/Footer';
@@ -16,8 +18,10 @@ function App() {
       <Header />
       <Hero />
       {/* <CopiedContent /> */}
+      <AIDatingPhotos />
       <Reviews />
-      <Introduction />
+      {/* <Introduction /> */}
+      <EthicalSection />
       {/* <ValueProposition /> */}
       {/* <EthicalAI /> */}
     

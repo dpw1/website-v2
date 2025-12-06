@@ -117,6 +117,38 @@
     text-align: center;
   }
 
+  /* Mobile dropdown menu */
+  .nav-dropdown {
+    width: 100%;
+  }
+
+  .dropdown-menu {
+    position: static;
+    width: 100%;
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease, padding 0.3s ease;
+    padding: 0;
+    margin-top: 0.5rem;
+    border: none;
+    border-radius: 0;
+    background: rgba(255, 255, 255, 0.05);
+  }
+
+  .dropdown-menu.open {
+    max-height: 300px;
+    padding: 0.5rem 0;
+  }
+
+  .dropdown-menu li button {
+    padding: 0.875rem 2rem;
+    font-size: 1rem;
+    text-align: left;
+  }
+
   .header-cta {
     margin-top: 1rem;
     width: auto;
@@ -149,6 +181,61 @@
 }
 
 .nav-menu li button:hover {
+  color: #667eea;
+}
+
+/* Dropdown Menu */
+.nav-dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: rgba(10, 10, 10, 0.98);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  list-style: none;
+  margin: 0;
+  padding: 0.5rem 0;
+  min-width: 180px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+  z-index: 1000;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.dropdown-menu.open {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.dropdown-menu li {
+  margin: 0;
+  padding: 0;
+}
+
+.dropdown-menu li button {
+  display: block;
+  width: 100%;
+  padding: 0.75rem 1.5rem;
+  text-align: left;
+  color: #f0f0f0;
+  font-size: 0.9rem;
+  font-weight: 500;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dropdown-menu li button:hover {
+  background: rgba(102, 126, 234, 0.1);
   color: #667eea;
 }
 
@@ -962,6 +1049,49 @@ p {
 
 .paragraph-text:last-child {
   margin-bottom: 0;
+}
+
+/* Ethical Section */
+.ethical-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+  margin: 3rem 0;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.ethical-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.ethical-image {
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .ethical-content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
+/* Service Section */
+.service-content {
+  max-width: 800px;
+  margin: 3rem auto;
+  text-align: center;
+}
+
+.service-text {
+  margin-bottom: 2rem;
+}
+
+.service-cta {
+  margin-top: 2rem;
 }
 
 /* Additional Content Block */
