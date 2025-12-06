@@ -12,8 +12,6 @@ const Hero = () => {
     return imageContext.keys().map((item, index) => {
       // Get the imported image path
       const imagePath = imageContext(item);
-      // Extract filename for alt text
-      const filename = item.replace('./', '');
       
       return {
         src: imagePath,
