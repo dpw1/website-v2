@@ -74,7 +74,7 @@ const CopiedContent = () => {
       <section className="section">
         <div className="container">
           <h2 className="heading">Get scroll-stopping dating photos without leaving home</h2>
-          <h3 className="subtitle" style={{ fontSize: '1.2rem', fontWeight: 'normal', marginTop: '1rem', marginBottom: '2rem' }}>Turn your selfies into realistic AI photos.</h3>
+          <h3 className="subtitle" style={{ fontSize: '1.2rem', fontWeight: 'normal', marginTop: '1rem', marginBottom: '2rem' }}>Turn your selfies into realistic AI photos OR fix your existing photos to look more attractive.</h3>
           
           <div className="button-wrapper" style={{ textAlign: 'center', margin: '2rem 0' }}>
             <a className="btn btn-primary" href={formUrl}>

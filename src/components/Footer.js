@@ -39,7 +39,7 @@ const Footer = () => {
             <p>
               <strong>Email:</strong> 
               <a href="mailto:getDatesWithAI@proton.me">
-                getDatesWithAI@proton.me
+                hello@getDatesWithAI.com
               </a>
             </p>
             <p>We respond within 24 hours</p>

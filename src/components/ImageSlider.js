@@ -2,11 +2,9 @@ import React, { useCallback, useEffect, useState } from 'react';
 import useEmblaCarousel from 'embla-carousel-react';
 
 const ImageSlider = ({ images, autoPlay = true, interval = 3000 }) => {
-  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
-  
   const [emblaRef, emblaApi] = useEmblaCarousel({ 
     loop: true,
-    slidesToScroll: isMobile ? 1 : 2,
+    slidesToScroll: 1,
     containScroll: 'trimSnaps'
   });
   const [currentThumbnailPage, setCurrentThumbnailPage] = useState(0);
@@ -15,16 +13,6 @@ const ImageSlider = ({ images, autoPlay = true, interval = 3000 }) => {
   
   const thumbnailsPerPage = 5;
   const totalThumbnailPages = Math.ceil(imagesWithDimensions.length / thumbnailsPerPage);
-
-  // Handle window resize for responsive behavior
-  useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth <= 768);
-    };
-
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
-  }, []);
 
   // Load image dimensions dynamically
   useEffect(() => {
@@ -80,15 +68,14 @@ const ImageSlider = ({ images, autoPlay = true, interval = 3000 }) => {
 
   const scrollTo = useCallback((imageIndex) => {
     if (emblaApi) {
-      // Calculate slide index based on current display mode
-      const slideIndex = isMobile ? imageIndex : Math.floor(imageIndex / 2);
-      emblaApi.scrollTo(slideIndex);
+      // Always show 1 image at a time
+      emblaApi.scrollTo(imageIndex);
       setCurrentSlide(imageIndex);
       // Update thumbnail page to show the current image
       const newThumbnailPage = Math.floor(imageIndex / thumbnailsPerPage);
       setCurrentThumbnailPage(newThumbnailPage);
     }
-  }, [emblaApi, thumbnailsPerPage, isMobile]);
+  }, [emblaApi, thumbnailsPerPage]);
 
   // Track current slide changes
   useEffect(() => {
@@ -96,18 +83,17 @@ const ImageSlider = ({ images, autoPlay = true, interval = 3000 }) => {
 
     const onSelect = () => {
       const slideIndex = emblaApi.selectedScrollSnap();
-      // Convert slide index back to image index based on current display mode
-      const imageIndex = isMobile ? slideIndex : slideIndex * 2;
-      setCurrentSlide(imageIndex);
+      // Always show 1 image at a time, so slideIndex equals imageIndex
+      setCurrentSlide(slideIndex);
       
       // Auto-update thumbnail pagination to keep active thumbnail visible
-      const newThumbnailPage = Math.floor(imageIndex / thumbnailsPerPage);
+      const newThumbnailPage = Math.floor(slideIndex / thumbnailsPerPage);
       setCurrentThumbnailPage(newThumbnailPage);
     };
 
     emblaApi.on('select', onSelect);
     return () => emblaApi.off('select', onSelect);
-  }, [emblaApi, isMobile, thumbnailsPerPage]);
+  }, [emblaApi, thumbnailsPerPage]);
 
   const goToThumbnailPage = (page) => {
     setCurrentThumbnailPage(page);
@@ -189,8 +175,6 @@ const ImageSlider = ({ images, autoPlay = true, interval = 3000 }) => {
                   alt={image.alt || `Dating profile transformation example ${index + 1} - ${image.label || 'AI enhanced photo'}`}
                   className="slide-image"
                   loading={index === 0 ? "eager" : "lazy"}
-                  width="1280"
-                  height="768"
                   onClick={() => openPhotoSwipe(index)}
                   style={{ cursor: 'pointer' }}
                 />

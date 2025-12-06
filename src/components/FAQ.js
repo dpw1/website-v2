@@ -9,7 +9,7 @@ const FAQ = () => {
  
     {
       question: `What age range does this work for?`,
-      answer: `I have worked with men aged between 18-55. The principles of expressing yourself and showing interest (which is what seduction is all about), are universal. However, I do provide age-specific advice and examples throughout the guide.`
+      answer: `I have worked with men aged between 18-55. The principles of expressing yourself and showing interest (which is what seduction is all about), are universal. However, I do provide age-specific advice and examples.`
     },
     {
       question: `How realistic do the AI photos look?`,
@@ -21,7 +21,7 @@ const FAQ = () => {
     },
     {
       question: `Will the photos look realistic and not 'AI-ish'?`,
-      answer: `Yes. When you're generating AI images, some will come out great, others not so great. For the \`not so great\` ones (meaning: they look AI-ish), it's better to use them in a lower resolution or apply a \`realistic skin filter\` which I cover in the guide. It's a matter of trial and error.<br><br>With my method I'll show you to get images as realistic as possible, with the casual smartphone-style photos.<br>`
+      answer: `Yes. When you're generating AI images, some will come out great, others not so great. For the \`not so great\` ones (meaning: they look AI-ish), it's better to use them in a lower resolution or apply a \`realistic skin filter\`. It's a matter of trial and error.<br><br>With my method I'll show you to get images as realistic as possible, with the casual smartphone-style photos.<br>`
     },
     {
       question: `Can dating apps detect AI photos?`,
@@ -37,9 +37,9 @@ const FAQ = () => {
       },
       {
         question: `Can I go on X dates a week?`,
-        answer: `You will definitely go on more dates, but it's important to be realistic about the possibilities. This is something I go in-depth in the book. There's a concept of 'natural attractiveness' (height, bone structure, good genetics, etc.) and 'controlled attractiveness' (style, grooming, haircuts/beards that suit your face, being in shape, etc.).<br><br>
+        answer: `You will definitely go on more dates, but it's important to be realistic about the possibilities. There's a concept of 'natural attractiveness' (height, bone structure, good genetics, etc.) and 'controlled attractiveness' (style, grooming, haircuts/beards that suit your face, being in shape, etc.).<br><br>
 
-If man X and man Y look exactly the same, but man X is overweight and doesn’t care about his appearance, and man Y is well-groomed and fit (not jacked), it's obvious that man Y will have an easier time. A man who is overweight and not taking care of his life will not have the same opportunities.`
+If man X and man Y look exactly the same, but man X is overweight and doesn't care about his appearance, and man Y is well-groomed and fit (not jacked), it's obvious that man Y will have an easier time. A man who is overweight and not taking care of his life will not have the same opportunities.`
       },
     {
       question: `What's the difference between perceived value and actual value?`,
@@ -47,24 +47,24 @@ If man X and man Y look exactly the same, but man X is overweight and doesn’t 
 
 For example, say you look super attractive and you have an amazing personality, but still get no matches on online dating: this means you're not portraying yourself in the best light.<br><br>
 
-With the AI images guide, you'll be able to generate pictures that will help you counter that and show your looks/personality in the best way possible. A man who looks average or even below average can still appear more attractive and get more real-life dates/sex than a man who's super attractive but has pictures that are not attractive.`
+With AI images, you'll be able to generate pictures that will help you counter that and show your looks/personality in the best way possible. A man who looks average or even below average can still appear more attractive and get more real-life dates/sex than a man who's super attractive but has pictures that are not attractive.`
     },
     {
       question: `How long does it take to apply what I learn here?`,
-      answer: `I have had clients who had no prior experience creating their profiles within 24 hours and going on dates within 3 days. Seriously. You read the book in a few hours, create your pictures in a few hours, and then hop onto the dating app and start getting matches. You'll use the texting guide you learned there to start converting these. If you're not experienced with women yet, it may take you a bit longer, I'd say that on average 5 - 10 days to get your first date. If you live in a small city it may take longer.`
+      answer: `I have had clients who had no prior experience creating their profiles within 24 hours and going on dates within 3 days. Seriously. You can learn the method in a few hours, create your pictures in a few hours, and then hop onto the dating app and start getting matches. You'll use the texting techniques to start converting these. If you're not experienced with women yet, it may take you a bit longer, I'd say that on average 5 - 10 days to get your first date. If you live in a small city it may take longer.`
     },
     {
       question: `Can women tell the pics are AI?`,
-      answer: `So far, I have not had any women calling me or my clients out about being AI. It's possible that some of them suspect though, and I teach in the book how to quickly prove your 'realness' and put her at ease once you start chatting.`
+      answer: `So far, I have not had any women calling me or my clients out about being AI. It's possible that some of them suspect though, and I can show you how to quickly prove your 'realness' and put her at ease once you start chatting.`
     },
     {
       question: `Isn't this catfishing/unethical?`,
       answer: `No. The definition of catfishing is: "a person who deceives someone online by means of a fictional or assumed persona, especially with the aim of luring them into a relationship." With AI pictures you are just portraying yourself under the best light. The pictures will still look like you. If you want to actually improve your looks, you can use apps like FaceApp after the images are generated.`
     },
     {
-      question: `Can I use "Online Dating Mastery Ebook" without AI images?`,
-      answer: `Absolutely! You can use the <a href='#products' onclick='document.getElementById("products").scrollIntoView({behavior: "smooth"})'>Online Dating Mastery Ebook</a> with your real images and still have good results if you have decent pictures.`
-    }
+      question: `Aren't AI images unethical?`,
+      answer: `The ethics behind AI images depend on how you use them. If you create images of yourself in a Lamborghini or a mansion when you've never been in those situations, that's not right. However, if you use AI to generate images of yourself in places you've actually been or in neutral settings, there's nothing unethical about it.<br><br>In fact, I believe the amount of filters people use to dramatically alter their appearance is far more unethical than using AI images. With our method, you'll look like your actual self—just presented in the best possible light.<br><br>That being said, you can always use AI as a temporary solution: use AI pictures to get matches, meet nice women, go on real adventures with them, and then take new authentic pictures together.`
+    },
   ];
 
   // Generate FAQ structured data
