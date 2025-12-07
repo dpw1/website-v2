@@ -11,6 +11,7 @@ import ContactForm from './components/ContactForm';
 import Footer from './components/Footer';
 import PromoSlide from './components/PromoSlide';
 import StickyButton from './components/StickyButton';
+import Comparison from './components/Comparison';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
       <Hero />
       {/* <CopiedContent /> */}
       <AIDatingPhotos />
+      <Comparison></Comparison>
       <Reviews />
       {/* <Introduction /> */}
       <EthicalSection />
@@ -29,7 +31,7 @@ function App() {
       <ContactForm />
       <Footer />
       {/* <Popup /> */}
-      <PromoSlide />
+      {/* <PromoSlide /> */}
       <StickyButton />
     </div>
   );

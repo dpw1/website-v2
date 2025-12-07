@@ -1,0 +1,522 @@
+/* Comparison Section Styles */
+
+/* Section Background Gradient */
+.bg-section-gradient {
+  background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 30%, #16213e 60%, #0f1419 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.bg-section-gradient::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at 50% 50%, rgba(102, 126, 234, 0.1) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+/* Card Gradient Background */
+.bg-card-gradient {
+  background: linear-gradient(135deg, rgba(26, 26, 46, 0.8) 0%, rgba(22, 33, 62, 0.9) 100%);
+  backdrop-filter: blur(10px);
+  position: relative;
+}
+
+/* Premium Shadow Effects */
+.shadow-premium {
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3),
+              0 0 20px rgba(0, 0, 0, 0.2),
+              inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+.shadow-premium-lg {
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4),
+              0 0 30px rgba(0, 0, 0, 0.3),
+              inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+/* Green Border Shadow (for GetDatesWithAi.com) */
+.border-green-400\/60,
+[class*="border-green-400"] {
+  border-color: rgba(74, 222, 128, 0.6) !important;
+}
+
+.shadow-green-400\/20,
+[class*="shadow-green-400"] {
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3),
+              0 0 20px rgba(74, 222, 128, 0.2),
+              inset 0 1px 0 rgba(255, 255, 255, 0.1) !important;
+}
+
+/* Red Border Shadow (for Other AI Tools and Dating Photographer) */
+.border-red-400\/60,
+[class*="border-red-400"] {
+  border-color: rgba(248, 113, 113, 0.6) !important;
+}
+
+.shadow-red-400\/20,
+[class*="shadow-red-400"] {
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3),
+              0 0 20px rgba(248, 113, 113, 0.2),
+              inset 0 1px 0 rgba(255, 255, 255, 0.1) !important;
+}
+
+/* Card Hover Effect */
+.card-hover-effect {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transform: translateY(0);
+}
+
+.card-hover-effect:hover {
+  transform: translateY(-8px);
+  border-width: 2px;
+}
+
+/* Enhanced hover for green card */
+[class*="border-green-400"].card-hover-effect:hover {
+  border-color: rgba(74, 222, 128, 0.9) !important;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4),
+              0 0 30px rgba(74, 222, 128, 0.3),
+              inset 0 1px 0 rgba(255, 255, 255, 0.1) !important;
+}
+
+/* Enhanced hover for red cards */
+[class*="border-red-400"].card-hover-effect:hover {
+  border-color: rgba(248, 113, 113, 0.9) !important;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4),
+              0 0 30px rgba(248, 113, 113, 0.3),
+              inset 0 1px 0 rgba(255, 255, 255, 0.1) !important;
+}
+
+/* Premium Button Styles */
+.btn-premium {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn-premium::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s;
+}
+
+.btn-premium:hover::before {
+  left: 100%;
+}
+
+.btn-premium:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(102, 126, 234, 0.5),
+              0 0 20px rgba(102, 126, 234, 0.3);
+}
+
+.btn-premium:active {
+  transform: translateY(0);
+}
+
+/* Button Size Variants */
+.btn-md {
+  padding: 0.875rem 1.75rem;
+  font-size: 1rem;
+}
+
+.btn-lg {
+  padding: 1rem 2rem;
+  font-size: 1.125rem;
+}
+
+@media (min-width: 1024px) {
+  .lg\:btn-lg {
+    padding: 1.25rem 2.5rem;
+    font-size: 1.25rem;
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .bg-section-gradient {
+    padding: 3rem 0;
+  }
+  
+  .shadow-premium {
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25),
+                0 0 15px rgba(0, 0, 0, 0.15);
+  }
+  
+  .card-hover-effect:hover {
+    transform: translateY(-4px);
+  }
+}
+
+@media (max-width: 768px) {
+  .bg-section-gradient {
+    padding: 2rem 0;
+  }
+  
+  .card-hover-effect:hover {
+    transform: translateY(-2px);
+  }
+  
+  .btn-premium {
+    width: 100%;
+    max-width: 300px;
+  }
+}
+
+/* Ensure images are properly displayed */
+.comparison-image {
+  border-radius: 0.75rem;
+  object-fit: cover;
+  width: 100%;
+  aspect-ratio: 1;
+  max-width: 240px;
+  margin: 0 auto;
+  display: block;
+}
+
+/* Text color utilities */
+.text-white {
+  color: #ffffff !important;
+}
+
+.text-gray-200 {
+  color: #e5e7eb !important;
+}
+
+/* Flexbox utilities */
+.flex {
+  display: flex;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.items-start {
+  align-items: flex-start;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.gap-3 {
+  gap: 0.75rem;
+}
+
+.gap-6 {
+  gap: 1.5rem;
+}
+
+/* Spacing utilities */
+.space-y-3 > * + * {
+  margin-top: 0.75rem;
+}
+
+.mb-6 {
+  margin-bottom: 1.5rem;
+}
+
+.mb-8 {
+  margin-bottom: 2rem;
+}
+
+.mt-12 {
+  margin-top: 3rem;
+}
+
+/* Typography */
+.leading-relaxed {
+  line-height: 1.625;
+}
+
+.font-bold {
+  font-weight: 700;
+}
+
+.font-extrabold {
+  font-weight: 800;
+}
+
+.font-semibold {
+  font-weight: 600;
+}
+
+.text-xl {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+
+.text-2xl {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.tracking-tight {
+  letter-spacing: -0.025em;
+}
+
+/* Responsive typography */
+@media (min-width: 1024px) {
+  .lg\:text-3xl {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+  }
+  
+  .lg\:mb-12 {
+    margin-bottom: 3rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .xl\:text-5xl {
+    font-size: 3rem;
+    line-height: 1;
+  }
+  
+  .xl\:mb-20 {
+    margin-bottom: 5rem;
+  }
+  
+  .xl\:w-\[380px\] {
+    width: 380px;
+  }
+  
+  .xl\:p-10 {
+    padding: 2.5rem;
+  }
+  
+  .xl\:gap-10 {
+    gap: 2.5rem;
+  }
+  
+  .xl\:py-32 {
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+  }
+}
+
+/* Container utilities */
+.max-w-7xl {
+  max-width: 80rem;
+}
+
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.px-4 {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.py-12 {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+.rounded-xl {
+  border-radius: 0.75rem;
+}
+
+.rounded-lg {
+  border-radius: 0.5rem;
+}
+
+.border-2 {
+  border-width: 2px;
+}
+
+.p-6 {
+  padding: 1.5rem;
+}
+
+.w-full {
+  width: 100%;
+}
+
+.max-w-sm {
+  max-width: 24rem;
+}
+
+/* Responsive padding and width */
+@media (min-width: 1024px) {
+  .lg\:px-8 {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+  
+  .lg\:py-20 {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+  
+  .lg\:flex-row {
+    flex-direction: row;
+  }
+  
+  .lg\:gap-8 {
+    gap: 2rem;
+  }
+  
+  .lg\:w-\[320px\] {
+    width: 320px;
+  }
+  
+  .lg\:mx-0 {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  
+  .lg\:p-8 {
+    padding: 2rem;
+  }
+  
+  .lg\:px-10 {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+  }
+  
+  .lg\:py-5 {
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+  }
+  
+  .lg\:text-lg {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
+}
+
+/* Aspect ratio */
+.aspect-square {
+  aspect-ratio: 1 / 1;
+}
+
+/* Object fit */
+.object-cover {
+  object-fit: cover;
+}
+
+/* Flex utilities */
+.flex-1 {
+  flex: 1 1 0%;
+}
+
+.shrink-0 {
+  flex-shrink: 0;
+}
+
+/* Icon colors */
+.text-green-400 {
+  color: #4ade80;
+}
+
+.hover\:text-green-300:hover {
+  color: #86efac;
+}
+
+.text-red-400 {
+  color: #f87171;
+}
+
+.hover\:text-red-300:hover {
+  color: #fca5a5;
+}
+
+/* Transition utilities */
+.transition-all {
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.duration-200 {
+  transition-duration: 200ms;
+}
+
+.duration-300 {
+  transition-duration: 300ms;
+}
+
+/* Icon positioning */
+.mt-0\.5 {
+  margin-top: 0.125rem;
+}
+
+/* Icon sizes */
+.w-5 {
+  width: 1.25rem;
+}
+
+.h-5 {
+  height: 1.25rem;
+}
+
+/* Additional spacing */
+.pb-4 {
+  padding-bottom: 1rem;
+}
+
+/* Text sizes */
+.text-base {
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+/* Padding utilities */
+.px-8 {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.py-4 {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.py-5 {
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+}
+
+/* Max width utilities */
+.max-w-\[240px\] {
+  max-width: 240px;
+}
+
+/* Additional responsive utilities */
+@media (min-width: 1024px) {
+  .lg\:w-auto {
+    width: auto;
+  }
+  
+  .lg\:gap-8 {
+    gap: 2rem;
+  }
+}
+
