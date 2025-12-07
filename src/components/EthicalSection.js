@@ -23,15 +23,6 @@ const EthicalSection = () => {
             <p className="paragraph-text">
               Not only that, but now you know what type of pictures actually work: your best picture is a hiking one? Cool, get a few friends you met thanks to your AI pictures and snap some of those IRL.
             </p>
-       
-          </div>
-          
-          <div className="ethical-image">
-            <img 
-              src="/images/success/1.png" 
-              alt="Success story example"
-              style={{ width: '100%', height: 'auto', borderRadius: '12px' }}
-            />
           </div>
         </div>
       </div>
