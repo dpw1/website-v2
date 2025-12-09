@@ -9,7 +9,6 @@ import EthicalSection from './components/EthicalSection';
 import FAQ from './components/FAQ';
 import ContactForm from './components/ContactForm';
 import Footer from './components/Footer';
-import PromoSlide from './components/PromoSlide';
 import StickyButton from './components/StickyButton';
 import Comparison from './components/Comparison';
 
