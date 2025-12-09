@@ -30,7 +30,7 @@ function App() {
       <ContactForm />
       <Footer />
       {/* <Popup /> */}
-      {/* <PromoSlide /> */}
+ 
       <StickyButton />
     </div>
   );
